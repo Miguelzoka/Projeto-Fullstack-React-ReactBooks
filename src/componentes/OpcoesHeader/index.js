@@ -1,0 +1,15 @@
+import './style.css'
+
+const textoOpcoes = ['CATEGGORIAS', 'FAVORITOS', 'MINHA ESTANTE'] /*conteudo do map para ser usado*/
+
+function OpcoesHeader() {
+    return (
+        <ul className='opcoes'>
+          {textoOpcoes.map((texto) => (
+            <li className='opcao'><p>{texto}</p></li>
+        ))}
+        </ul>
+    )
+}
+
+export default OpcoesHeader
