@@ -1,14 +1,30 @@
-import './style.css'
+import styled from 'styled-components'
 
-const textoOpcoes = ['CATEGGORIAS', 'FAVORITOS', 'MINHA ESTANTE'] /*conteudo do map para ser usado*/
+const Opcao = styled.li`
+    min-width: 120px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    padding: 0 5px;
+    cursor: pointer;
+`
+
+const Opcoes = styled.ul`
+    display: flex;;
+`
+
+const textoOpcoes = ['CATEGORIAS', 'FAVORITOS', 'MINHA ESTANTE'] /*conteudo do map para ser usado*/
 
 function OpcoesHeader() {
     return (
-        <ul className='opcoes'>
+        <Opcoes>
           {textoOpcoes.map((texto) => (
-            <li className='opcao'><p>{texto}</p></li>
+            <Opcao><p>{texto}</p></Opcao>
         ))}
-        </ul>
+        </Opcoes>
     )
 }
 
